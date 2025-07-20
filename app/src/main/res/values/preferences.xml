@@ -9,7 +9,7 @@
     <string-array name="pref_privilege_provider_string">
         <item>@string/pref_provider_none</item>
         <item>@string/pref_provider_root</item>
-        <item>@string/pref_provider_shizuku</item>
+       
     </string-array>
 
     <string name="pref_privilege_provider_default" translatable="false">None</string>
