@@ -75,7 +75,7 @@ dependencies {
 
     implementation libs.androidx.camera.view
     implementation libs.androidx.camera.extensions
-
+    implementation "androidx.multidex:multidex:2.0.1"
     // Shizuku API
     //implementation libs.shizuku.api
     //implementation libs.shizuku.provider
