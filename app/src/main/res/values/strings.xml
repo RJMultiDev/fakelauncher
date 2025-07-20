@@ -68,7 +68,6 @@
     <string name="pref_privilege_provider" translatable="true">Privilege provider</string>
     <string name="pref_provider_none" translatable="true">None</string>
     <string name="pref_provider_root" translatable="false">Root</string>
-    <string name="pref_provider_shizuku" translatable="false">Shizuku</string>
     <string name="pref_check_privilege" translatable="true">Check if privilege has been granted</string>
     <string name="pref_check_privilege_granted" translatable="true">Granted</string>
     <string name="pref_check_privilege_denied" translatable="true">Denied</string>
