@@ -13,7 +13,7 @@ android {
     def keyKeyAliasPassword = properties.getProperty('keyAliasPassword')
 
     signingConfigs {
-        debug {
+        config {
             storeFile keyKeyStoreFile
             storePassword keyKeyStorePassword
             keyAlias keyKeyAlias
@@ -36,6 +36,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
