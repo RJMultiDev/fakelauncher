@@ -26,9 +26,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import rikka.shizuku.Shizuku;
-import rikka.sui.Sui;
-
 /**
  *
  * Privilege provider
@@ -36,7 +33,7 @@ import rikka.sui.Sui;
  * 提权管理
  *
  * @author ZH-XiJun
- *
+ * @fucker RJMultiDev
  */
 
 public class PrivilegeProvider {
@@ -49,7 +46,7 @@ public class PrivilegeProvider {
     // Run method to int
     public final static int METHOD_NORMAL = 0;
     public final static int METHOD_ROOT = 1;
-    public final static int METHOD_SHIZUKU = 2;
+    // public final static int METHOD_SHIZUKU = 2;
     // Command define
     public final static String CMD_SU = "su";
     public final static String CMD_BUSYBOX = "busybox";
@@ -179,27 +176,6 @@ public class PrivilegeProvider {
                 } catch (RuntimeException e) {
                     return false;
                 }
-            case METHOD_SHIZUKU:
-                if (Sui.init("com.wtbruh.fakelauncher")) Log.d(TAG, "Sui is available");
-                if (Shizuku.isPreV11()) {
-                    // Pre-v11 is unsupported
-                    return false;
-                }
-                try {
-                    if (Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED) {
-                        // Granted
-                        return true;
-                    } else if (Shizuku.shouldShowRequestPermissionRationale()) {
-                        // Users choose "Deny and don't ask again"
-                        return false;
-                    } else {
-                        // Request the permission
-                        Shizuku.requestPermission(114514);
-                        return false;
-                    }
-                } catch (IllegalStateException e){
-                    return false;
-                }
             default:
                 return false;
         }
@@ -207,7 +183,6 @@ public class PrivilegeProvider {
     public static int privilegeToInt(String str) {
         return switch (str) {
             case "Root" -> METHOD_ROOT;
-            case "Shizuku" -> METHOD_SHIZUKU;
             default -> METHOD_NORMAL;
         };
     }
@@ -268,7 +243,6 @@ public class PrivilegeProvider {
         String s;
         switch (method) {
             case METHOD_ROOT -> s = "su";
-            case METHOD_SHIZUKU -> s = "rish";
             default -> s = "sh";
 
         }
