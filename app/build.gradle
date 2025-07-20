@@ -7,7 +7,7 @@ android {
     InputStream inputStream = project.rootProject.file('keystore.properties').newDataInputStream()
     properties.load(inputStream)
 
-    def keyKeyStoreFile = file(properties.getProperty('keyStoreFile'))
+    def keyKeyStoreFile = project.rootProject.file(properties.getProperty('keyStoreFile'))
     def keyKeyStorePassword = properties.getProperty('keyStorePassword')
     def keyKeyAlias = properties.getProperty('keyAlias')
     def keyKeyAliasPassword = properties.getProperty('keyAliasPassword')
