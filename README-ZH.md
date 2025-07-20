@@ -60,7 +60,7 @@
 
 ## TO-DO
 
-- [ ] 尝试适配Dhizuku，Shizuku等授权器，从而实现免root支持
+- [X] 尝试适配Dhizuku，Shizuku等授权器，从而实现免root支持 适配你妈逼
 - [ ] 加入“*键解锁”
 - [ ] 加入MP3界面样式
 - [ ] ~~加入描边字体~~ 字体描边宽度可调整
@@ -81,5 +81,4 @@
 - [Android](https://source.android.google.cn/)
 - [Xposed](https://github.com/LSPosed/LSPosed)
 - [PinningApp](https://github.com/HChenX/PinningApp)
-- [Shizuku API](https://github.com/RikkaApps/Shizuku-API)
 - [Dhizuku API](https://github.com/iamr0s/Dhizuku-API)
