@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 import android.util.Log;
-import androidx.multidex.MultiDexApplication
+import androidx.multidex.MultiDexApplication;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
