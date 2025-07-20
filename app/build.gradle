@@ -77,8 +77,8 @@ dependencies {
     implementation libs.androidx.camera.extensions
 
     // Shizuku API
-    implementation libs.shizuku.api
-    implementation libs.shizuku.provider
+    //implementation libs.shizuku.api
+    //implementation libs.shizuku.provider
     // Dhizuku API
     implementation libs.dhizuku.api
     // Xposed API
