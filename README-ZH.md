@@ -2,10 +2,10 @@
 <img src="readme-assets/app-icon.png" width=128 />
 
 ## fakelauncher
-*你自己看，这绝对是个老人机，不是智能机啊*
+*你自己看，这能在sdk14跑啊，傻逼*
 
 **把你的伪老机（老人机外貌但是有智能系统）伪装成一个真正的老人机**
-
+**我操你妈sdk14-24也要吃上**
 </div>
 
 > [!Caution]
