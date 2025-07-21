@@ -40,7 +40,7 @@ public class PrivilegeProvider {
     private final static String TAG = PrivilegeProvider.class.getSimpleName();
     // Privilege type to int
     public final static int DEACTIVATED = 0;
-    // public final static int DHIZUKU = 1;
+    public final static int DHIZUKU = 1;
     public final static int DEVICE_OWNER = 2;
     public final static int DEVICE_ADMIN = 3;
     // Run method to int
