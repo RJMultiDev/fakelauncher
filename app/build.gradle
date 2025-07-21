@@ -25,7 +25,7 @@ android {
 
     defaultConfig {
         applicationId "com.wtbruh.fakelauncher"
-        minSdk 19
+        minSdk 16
         targetSdk 35
         versionCode 3
         versionName "0.3"
@@ -80,7 +80,7 @@ dependencies {
     //implementation libs.shizuku.api
     //implementation libs.shizuku.provider
     // Dhizuku API
-    implementation libs.dhizuku.api
+    //implementation libs.dhizuku.api
     // Xposed API
     compileOnly libs.xposed.api
     // Glide Engine
