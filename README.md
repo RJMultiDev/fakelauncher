@@ -2,7 +2,7 @@
 <img src="readme-assets/app-icon.png" width=128 />
 
 ## fakelauncher
-*I swear, it is really just a feature phone, not a smart phone!*
+*I swear, I fucked it to let it run on sdk 14!*
 
 **Disguise your feature-phone-like smart phone (feature phone style but uses Android system) as a real feature phone.**
 
