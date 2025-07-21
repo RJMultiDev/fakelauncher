@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 import androidx.preference.PreferenceManager;
 
-import com.rosan.dhizuku.api.Dhizuku;
-import com.rosan.dhizuku.api.DhizukuRequestPermissionListener;
+// import com.rosan.dhizuku.api.Dhizuku;
+// import com.rosan.dhizuku.api.DhizukuRequestPermissionListener;
 import com.wtbruh.fakelauncher.MainActivity;
 import com.wtbruh.fakelauncher.R;
 import com.wtbruh.fakelauncher.ui.settings.SubSettingsFragment;
@@ -40,7 +40,7 @@ public class PrivilegeProvider {
     private final static String TAG = PrivilegeProvider.class.getSimpleName();
     // Privilege type to int
     public final static int DEACTIVATED = 0;
-    public final static int DHIZUKU = 1;
+    // public final static int DHIZUKU = 1;
     public final static int DEVICE_OWNER = 2;
     public final static int DEVICE_ADMIN = 3;
     // Run method to int
@@ -52,7 +52,7 @@ public class PrivilegeProvider {
     public final static String CMD_BUSYBOX = "busybox";
     public final static String CMD_SH = "sh";
     public final static String CMD_SH_FULL = "/system/bin/sh";
-    public final static String CMD_RISH= "rish";
+    // public final static String CMD_RISH= "rish";
 
     public final static int PERMISSION_REQUEST_CODE = 123;
 
@@ -149,7 +149,7 @@ public class PrivilegeProvider {
                 prefix = new String[]{CMD_SU, "-c"};
                 break;
             // case METHOD_SHIZUKU:
-                // wip
+                // fuck
             case METHOD_NORMAL:
             default:
                 return cmd;
@@ -193,23 +193,10 @@ public class PrivilegeProvider {
      * @return 特权对应的resource id
      */
     public static int checkDeviceAdmin(Context context) {
-        boolean dhizuku = PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(SubSettingsFragment.PREF_ENABLE_DHIZUKU, false);
+        boolean dhizuku = false;
 
         if (dhizuku) {
-            Log.d(TAG, "Requesting dhizuku");
-            if (!Dhizuku.init(context)) return DEACTIVATED;
-            if (Dhizuku.isPermissionGranted()) return DHIZUKU;
-            if (MainActivity.getLockApp(context) != -1 ) {
-                Toast.makeText(context, R.string.toast_open_settings_from_launcher, Toast.LENGTH_LONG).show();
-                return DEACTIVATED;
-            }
-            Dhizuku.requestPermission(new DhizukuRequestPermissionListener() {
-                @Override
-                public void onRequestPermission(int grantResult){
-                }
-            });
-
+            Log.d(TAG, "Fuck dhizuku");
         } else {
             Log.d(TAG, "Requesting DeviceOwner/DeviceAdmin");
             DevicePolicyManager dpm = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
