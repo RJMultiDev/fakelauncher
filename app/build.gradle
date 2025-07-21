@@ -25,7 +25,7 @@ android {
 
     defaultConfig {
         applicationId "com.wtbruh.fakelauncher"
-        minSdk 10
+        minSdk 14
         targetSdk 35
         versionCode 3
         versionName "0.3"
